@@ -1,6 +1,6 @@
 ### About
 
-The module `pyvortex` consists of functions to calculate the equivalent latitude and edge of a polar vortex using [Nash criteria](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/96JD00066).
+The module `pyvortex` consists of functions to calculate the [equivalent latitude](https://journals.ametsoc.org/doi/citedby/10.1175/1520-0469%282003%29060%3C0287%3ATELADT%3E2.0.CO%3B2) and edge of a polar vortex using [Nash criteria](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/96JD00066).
 
 ### Installation
 

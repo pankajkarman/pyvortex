@@ -1,0 +1,8 @@
+README.md
+pyvortex.py
+setup.py
+pyvortex.egg-info/PKG-INFO
+pyvortex.egg-info/SOURCES.txt
+pyvortex.egg-info/dependency_links.txt
+pyvortex.egg-info/requires.txt
+pyvortex.egg-info/top_level.txt

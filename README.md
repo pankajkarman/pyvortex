@@ -29,6 +29,8 @@ If you want to get both equivalent latitude and Vortex edge, just use:
 ```python
 eql = pol.get_edge(min_eql=30)
 ```
+![Arctic Vortex](arctic_polar_vortex_20110201.gif)
+
 #### Southern Hemisphere
 
 Multiply pv and uwind by -1, and all other things will be the same.

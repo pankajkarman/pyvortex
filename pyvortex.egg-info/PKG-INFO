@@ -1,14 +1,14 @@
 Metadata-Version: 2.1
 Name: pyvortex
-Version: 1.0
+Version: 0.1
 Summary: Polar vortex edge detection using Nash criteria
-Home-page: /home/pankaj/Desktop/vortex
+Home-page: https://github.com/pankajkarman/pyvortex
 Author: Pankaj Kumar
 Author-email: pankaj.kmr1990@gmail.com
 License: MIT
 Description: ### About
         
-        The module `pyvortex` consists of functions to calculate the equivalent latitude and edge of a polar vortex using Nash criteria.
+        The module `pyvortex` consists of functions to calculate the equivalent latitude and edge of a polar vortex using [Nash criteria](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/96JD00066).
         
         ### Installation
         

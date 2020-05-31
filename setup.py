@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
@@ -6,11 +6,11 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setup(
      name='pyvortex',
-     version='1.0',
+     version='0.1',
      description='Polar vortex edge detection using Nash criteria',
      long_description=long_description,
      long_description_content_type='text/markdown',
-     url='/home/pankaj/Desktop/vortex',
+     url='https://github.com/pankajkarman/pyvortex',
      author='Pankaj Kumar',
      author_email='pankaj.kmr1990@gmail.com',
      license='MIT',

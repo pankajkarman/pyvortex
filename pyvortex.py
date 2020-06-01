@@ -86,13 +86,10 @@ class PolarVortex():
         eq.attrs['long_name'] = 'Equivalent Latitude Relationship'
         return eq
 
-    @staticmethod
-    def _sloping_filter():
-        fil = np.ones(90)
-        slp = np.linspace(0, 1, 11, endpoint=True)
-        for i in np.arange(len(slp)):
-            fil[-i] = slp[i]
-        return fil
+    def _sloping_filter(self):
+        fil = pd.Series(np.ones_like(self.elat), index=self.elat).astype('float')
+	fil[elat>=80] = np.linspace(1, 0, np.sum(elat>=80))    
+	return fil.values
 
     @staticmethod
     def _get_area(ylat, xlon, planet_radius=6.378e+6):

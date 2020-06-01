@@ -33,7 +33,7 @@ eql = pol.get_edge(min_eql=30)
 
 #### Southern Hemisphere
 
-Flip pv along latitude dimension and multiply by -1. All other things will be the same.
+Flip pv and uwind along latitude dimension and multiply pv by -1. All other things will be the same.
 
 Example:
 

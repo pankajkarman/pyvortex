@@ -88,8 +88,8 @@ class PolarVortex():
 
     def _sloping_filter(self):
         fil = pd.Series(np.ones_like(self.elat), index=self.elat).astype('float')
-	fil[elat>=80] = np.linspace(1, 0, np.sum(elat>=80))    
-	return fil.values
+        fil[elat>=80] = np.linspace(1, 0, np.sum(elat>=80))
+        return fil.values
 
     @staticmethod
     def _get_area(ylat, xlon, planet_radius=6.378e+6):

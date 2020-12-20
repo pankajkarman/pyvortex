@@ -7,6 +7,13 @@ The module `pyvortex` consists of functions to calculate the [equivalent latitud
 ```
 pip install pyvortex
 ```
+
+install the latest version using 
+```
+pip install git+https://github.com/pankajkarman/pyvortex.git
+
+```
+
 ### Usage
 
 `pyvortex` is easy to use. Just import:

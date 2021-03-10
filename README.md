@@ -14,6 +14,11 @@ pip install git+https://github.com/pankajkarman/pyvortex.git
 
 ```
 
+## Documentation
+
+Latest documentation is available [here](https://pankajkarman.github.io/pyvortex/).
+
+
 ### Usage
 
 `pyvortex` is easy to use. Just import:

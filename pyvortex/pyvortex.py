@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
 import numpy as np
+import pandas as pd
 import xarray as xr
+
 
 class PolarVortex():
     '''This module contains functions to calculate equivalent latitude and edge of a polar vortex 
@@ -88,7 +90,7 @@ class PolarVortex():
 
     def _sloping_filter(self):
         fil = pd.Series(np.ones_like(self.elat), index=self.elat).astype('float')
-        fil[elat>=80] = np.linspace(1, 0, np.sum(elat>=80))
+        fil[self.elat>=80] = np.linspace(1, 0, np.sum(self.elat>=80))
         return fil.values
 
     @staticmethod

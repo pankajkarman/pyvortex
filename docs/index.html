@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.9.2" />
 <title>pyvortex API documentation</title>
-<meta name="description" content="" />
+<meta name="description" content="This module consists of functions to calculate the [equivalent …" />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
 <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
@@ -22,11 +22,77 @@
 <h1 class="title">Package <code>pyvortex</code></h1>
 </header>
 <section id="section-intro">
+<p>This module consists of functions to calculate the <a href="https://journals.ametsoc.org/doi/citedby/10.1175/1520-0469%282003%29060%3C0287%3ATELADT%3E2.0.CO%3B2">equivalent latitude</a> and edge of a polar vortex using <a href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/96JD00066">Nash criteria</a>.</p>
+<h3 id="installation">Installation</h3>
+<pre><code>pip install -U pyvortex
+</code></pre>
+<p>install the latest version using </p>
+<pre><code>pip install git+https://github.com/pankajkarman/pyvortex.git
+</code></pre>
+<h3 id="usage">Usage</h3>
+<p><code><a title="pyvortex.pyvortex" href="pyvortex.html">pyvortex.pyvortex</a></code> is easy to use. Just import:</p>
+<pre><code class="language-python">import pyvortex as vr
+</code></pre>
+<h4 id="northern-hemisphere">Northern Hemisphere</h4>
+<p>Instantiate the <code>PolarVortex</code> class using: </p>
+<pre><code class="language-python">pol = PolarVortex(pv, uwind)
+</code></pre>
+<p>Get equivalent lqtitude for the provided vorticity data as:</p>
+<pre><code class="language-python">eql = pol.get_eql()
+</code></pre>
+<p>If you want to get both equivalent latitude and Vortex edge, just use:</p>
+<pre><code class="language-python">eql = pol.get_edge(min_eql=30)
+</code></pre>
+<h4 id="southern-hemisphere">Southern Hemisphere</h4>
+<p>Flip pv and uwind along latitude dimension and multiply pv by -1. All other things will be the same.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">from .pyvortex import PolarVortex</code></pre>
+<pre><code class="python">&#34;&#34;&#34;
+
+This module consists of functions to calculate the [equivalent latitude](https://journals.ametsoc.org/doi/citedby/10.1175/1520-0469%282003%29060%3C0287%3ATELADT%3E2.0.CO%3B2) and edge of a polar vortex using [Nash criteria](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/96JD00066).
+
+### Installation
+
+```
+pip install -U pyvortex
+```
+
+install the latest version using 
+```
+pip install git+https://github.com/pankajkarman/pyvortex.git
+```
+
+### Usage
+
+`pyvortex` is easy to use. Just import:
+
+```python
+import pyvortex as vr
+```
+
+#### Northern Hemisphere
+
+Instantiate the `PolarVortex` class using: 
+```python
+pol = PolarVortex(pv, uwind)
+```
+Get equivalent lqtitude for the provided vorticity data as:
+```python
+eql = pol.get_eql()
+```
+If you want to get both equivalent latitude and Vortex edge, just use:
+```python
+eql = pol.get_edge(min_eql=30)
+```
+#### Southern Hemisphere
+
+Flip pv and uwind along latitude dimension and multiply pv by -1. All other things will be the same.
+
+&#34;&#34;&#34;
+
+from .pyvortex import PolarVortex</code></pre>
 </details>
 </section>
 <section>
@@ -48,7 +114,14 @@
 <nav id="sidebar">
 <h1>Index</h1>
 <div class="toc">
-<ul></ul>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a><ul>
+<li><a href="#northern-hemisphere">Northern Hemisphere</a></li>
+<li><a href="#southern-hemisphere">Southern Hemisphere</a></li>
+</ul>
+</li>
+</ul>
 </div>
 <ul id="index">
 <li><h3><a href="#header-submodules">Sub-modules</a></h3>
